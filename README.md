@@ -47,6 +47,7 @@ A full-stack **Blog Application** built with **Spring Boot** and **MongoDB**, de
 
 ⚙️ Setup & Installation
 1️⃣ Clone the repository
+
 git clone https://github.com/yourusername/blog-app.git
 cd blog-app
 

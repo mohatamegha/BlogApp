@@ -1,0 +1,12 @@
+@import "tailwindcss";
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* hide scroll bar */
+}
+
+@theme{
+  --color-primary: #5044e5;
+}

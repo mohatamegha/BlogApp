@@ -1,16 +1,79 @@
-# React + Vite
+# Blog Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **Blog Application** built with **Spring Boot** and **MongoDB**, designed for a single-admin setup where the admin can manage blogs and comments efficiently. The app supports **category-based filtering**, **search functionality**, **real-time rich text editing**, and **comment moderation**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
 
-## React Compiler
+### 👩‍💻 Admin
+- Add, edit, and delete blogs through an intuitive **Quill rich-text editor**.  
+- Categorize blogs for organized viewing.  
+- Manage and moderate user comments.  
+- Receive notifications using **Toast** for various operations (success/error feedback).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👥 Viewers
+- View all blogs published by the admin.  
+- Filter blogs by **category** or **search** by keyword.  
+- Add **comments** under blogs with their name.  
+- (Future scope) Offensive comments will be automatically detected using **sentiment analysis and AI**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Future Enhancements
+- Integrate **AI-based sentiment analysis** to automatically detect and filter offensive comments.  
+- Add **multi-admin support**.  
+- Include **user authentication** for registered readers.  
+- Implement **blog likes, shares, and bookmarking** functionality.
+
+---
+
+## 🏗️ Tech Stack
+
+### **Frontend**
+- **React.js**
+- **Tailwind CSS** — for modern, responsive styling  
+- **Toast** — for notification processing  
+- **Quill.js** — as a rich-text editor for creating blogs  
+
+### **Backend**
+- **Spring Boot** — for the RESTful backend  
+- **Spring Data JPA** — for ORM and data persistence  
+- **Spring Security** — for authentication and route protection  
+- **Spring Web** — for building REST APIs  
+- **MongoDB** (and **MongoDB Atlas**) — as the NoSQL database  
+
+---
+
+⚙️ Setup & Installation
+1️⃣ Clone the repository
+
+git clone https://github.com/yourusername/blog-app.git
+cd blog-app
+
+2️⃣ Backend Setup (Spring Boot)
+
+Open the project in your preferred IDE (like IntelliJ or Eclipse).
+
+Update application.properties with your MongoDB credentials:
+
+spring.data.mongodb.uri=your-mongodb-atlas-connection-string
+spring.application.name=BlogApp
+
+
+Run the Spring Boot application:
+
+mvn spring-boot:run
+
+3️⃣ Frontend Setup
+
+Navigate to your frontend directory.
+
+Install dependencies:
+
+npm install
+
+
+Start the frontend:
+
+npm start
